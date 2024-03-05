@@ -1,0 +1,4 @@
+repository "Learn_Ruby_Adventure@yranib1@cloud.cn"
+  path "/"
+    smartbranch "/main" 
+     
