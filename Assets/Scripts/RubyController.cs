@@ -24,6 +24,8 @@ public class RubyController : MonoBehaviour
     Vector2 lookDirection = new Vector2(1,0);
 
     public GameObject projectilePrefab;
+    
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +34,15 @@ public class RubyController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         
         currentHealth = maxHealth;
+        
+        audioSource= GetComponent<AudioSource>();
     }
 
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
+    
     // Update is called once per frame
     void Update()
     {
